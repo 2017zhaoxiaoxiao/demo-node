@@ -1,6 +1,8 @@
 #!/usr/bin/node
 
 var area=require('./02-export-object-v2');
+console.log('\ndiameter:\t', circle.diameter(10));
+console.log('circumference:\t', circle.circumference(10));
 console.log('r=10,circle area:',circle.area(10));
 
 

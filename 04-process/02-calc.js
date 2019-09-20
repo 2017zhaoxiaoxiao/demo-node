@@ -1,8 +1,33 @@
 #!/usr/bin/node
 
-var fn=process.argv[2];
+/*var fn=process.argv[2];
 
 console.log(fn,'=',eval(fn));
 
 console.log(process.argv.length);
-console.log(process.argv);
+console.log(process.argv);*/
+
+const log=console.log,
+      arg=process.argv[2];
+
+if(typeof(arg)==='undefined'||
+    arg=='--help'||
+    arg==='-h'
+  ){
+    help();
+  }
+else{
+  calc();
+}
+function help(){
+  const msg=''
+    + 'usage: cmd-name [OPTION] [expression]\n'
+    + 'evaluate the expression.\n'
+    +'\n'
+    + 'Mandatory argument to long options are mandatory for short options too.\n '
+    + '  -h, --help output help information and exit\n';
+  log(msg);
+}
+function calc(){
+  log(arg+ '=%s',eval(arg));
+}
