@@ -6,7 +6,7 @@ const fs=require('fs'),
 
 
 fs.watch(dst,function(evt,file){
-  console.log("%s  happened with file: %s",evt,file);
+  console.log('%s  happened with file: %s',evt,file);
 });
 
 

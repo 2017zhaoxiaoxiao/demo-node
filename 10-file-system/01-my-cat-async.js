@@ -13,5 +13,5 @@ fs.readFile(file,function(err,data){
 
   }
 
-}|);
+});   
 

@@ -9,7 +9,7 @@ const station={
 var radio=new Radio(station);
 radio.on('play',(station)=>{
   console.log('"%s" FM %s opened!',station.name,station.freq);
- console. log('lalalal');
+  console. log('lalalal');
 });
 
 radio.on('stop',(station)=>{

@@ -5,17 +5,17 @@ const fs   = require('fs'),
       file = process.argv[2];
 
 if(process.argv.length !== 3) {
-    console.error('命令行参数格式：cmd fileName');
-      process.exit(1);
+  console.error('命令行参数格式：cmd fileName');
+  process.exit(1);
 
 }
 
 try {
-    var data = fs.readFileSync(file).toString('base64');
+  var data = fs.readFileSync(file).toString('base64');
 
 } catch(e) {
-    console.error(e.message);
-      process.exit(2);
+  console.error(e.message);
+  process.exit(2);
 
 }
 

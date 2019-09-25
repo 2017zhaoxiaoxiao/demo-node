@@ -2,12 +2,12 @@
 
 
 function  Bomb() {
-    this.message = 'Bomb';
+  this.message = 'Bomb';
 
 }
 
 Bomb.prototype.explode = function() {
-    console.log(this.message);
+  console.log(this.message);
 
 };
 

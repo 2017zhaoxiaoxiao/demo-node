@@ -15,7 +15,7 @@ process.stdin.on('data',function(data){
 });
 process.stdin.on('end' ,()=>{
   console.log(usr);
-})
+});
 
 
 

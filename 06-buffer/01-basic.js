@@ -16,7 +16,7 @@ buf1.fill(0,0,256);
 log('buf1:',buf1);
 //
 //对buffer做切片操作
-var buf2=buf1.slice(250,256);
+buf2=buf1.slice(250,256);
 log('buf2',buf2);
 //在 buffer 中填充数据，buffer 数据转化成 JSON 数据
 buf2.fill(0);

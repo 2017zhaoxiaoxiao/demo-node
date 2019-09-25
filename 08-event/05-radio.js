@@ -1,42 +1,40 @@
-#!/usr/bin/node
+adio = function(station) {
+  var _listeners = {};
 
+  setTimeout(() => {
+    emit('open', station);
+            
+  }, 0);
 
-      
-function Radio(station){
-  var _listeners={
-  
-  };
-  EventEmitter.call(this);
+  setTimeout(() => {
+    emit('stop', station);
+            
+  }, 5000);
 
-  
-  setTimeout(()=>{
-    emit('play',station);
-
-  },0);
-  setTimeout(()=>{
-    emit('stop',station);
-  },5000);
-  funciton emit(evt,arg){
-    if(typeof(_listeners[evt])==='undefined'){
-      console.error('Error:%s not defined',evt);
+  function emit(evt, arg) {
+    if(typeof(_listeners[evt]) === 'undefined') {
+      console.error('Error: %s not defined!', evt);
       process.exit(1);
+                        
     }
-    _listeners[evt].forEach(fn)=>{
-      fn.call(this,arg);
-    }
+
+    _listeners[evt].forEach((fn) => {
+      fn.call(this, arg);
+                  
+    });
+        
   }
-  //注册事件
-  this.on(evt,fn)=>{
-    if(typeof _listeners[evt]==='undefined'){
-      _listeners[evt]=[];
-      
+
+  this.on = (evt, fn) => {
+    if(typeof(_listeners[evt]) === 'undefined') {
+      _listeners[evt] = [];
+                  
     }
+
     _listeners[evt].push(fn);
-  }
-}
+            
+  };
 
+};
 
-
-module.exports=Radio;
-
-
+module.exports = Radio;

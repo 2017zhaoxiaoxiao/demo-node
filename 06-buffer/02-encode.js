@@ -4,8 +4,8 @@ const log=console.log,
       usr=process.argv[2],
       pwd=process.argv[3];
 if(process.argv.length !== 4) {
-    console.error('命令行格式：cmd username password');
-      process.exit(1);
+  console.error('命令行格式：cmd username password');
+  process.exit(1);
 
 }
 

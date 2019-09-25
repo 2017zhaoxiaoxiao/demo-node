@@ -28,10 +28,12 @@ log('PID:',process.pid);
 log('execPath:',process.execPath);
 log('node.js ver:',process.version);
 log('uid:',process.getuid());
-log('')log('gid:',process.getgid());
+log('');
+log('gid:',process.getgid());
 /*
 process.stdin.on('data',function(data){
 
   log(data);
 })
+
 */

@@ -10,6 +10,6 @@ var circle={
   'diameter':function(radius){
     return 2*radius;
   }
-}
+};
 console.dir(module);
 module.exports=circle;

@@ -8,8 +8,7 @@ try{
   console.log(fs.readFileSync(fid).toString('utf8'));
   
   fs.closeSync(fid);
-}
-catch{
-  console.eror(e.message);
+}catch(e){
+  console.error(e.message);
   process.exit(1);
 }

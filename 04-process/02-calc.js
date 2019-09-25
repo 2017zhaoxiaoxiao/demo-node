@@ -12,10 +12,9 @@ const log=console.log,
 
 if(typeof(arg)==='undefined'||
     arg=='--help'||
-    arg==='-h'
-  ){
-    help();
-  }
+    arg==='-h'){
+  help();
+}
 else{
   calc();
 }
