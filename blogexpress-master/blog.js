@@ -3,7 +3,7 @@
 const http = require('http'),
       url =require('url'),
    
-      qs=require('qs');
+     
       fs = require('fs');
 
 
